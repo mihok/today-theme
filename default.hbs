@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+    <meta charSet="UTF-8" />
+    <meta name="viewport" content="" />
+
+    <!--// 
+       __    __    ___  _        __   ___   ___ ___    ___  __
+      |  |__|  |  /  _]| |      /  ] /   \ |   |   |  /  _]|  |
+      |  |  |  | /  [_ | |     /  / |     || _   _ | /  [_ |  |
+      |  |  |  ||    _]| |___ /  /  |  O  ||  \_/  ||    _]|__|
+      |  `  '  ||   [_ |     /   \_ |     ||   |   ||   [_  __
+       \      / |     ||     \     ||     ||   |   ||     ||  |
+        \_/\_/  |_____||_____|\____| \___/ |___|___||_____||__|
+
+      I hope you enjoy my source code :) You can actually find that it is
+      completely open source and available if you head over to:
+
+      https://github.com/mihok/today-theme
+
+    //-->
+
+    <title>{{meta_title}}</title>
+
+    <link rel="shortcut icon" href="{{asset "images/favicon.ico"}}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset "images/favicon-16x16.png"}}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset "images/favicon-32x32.png"}}" />
+    <link rel="icon" type="image/png" sizes="96x96" href="{{asset "images/favicon-96x96.png"}}" />
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700|Roboto+Mono:300,400,500|Roboto:100,100i,300,300i,400,400i,500,700" rel="stylesheet" />
+    <link href="{{asset "styles/normalize.css"}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset "styles/skeleton.css"}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset "styles/icons-social.css"}}"rel="stylesheet" type="text/css" />
+    <link href="{{asset "styles/icons-air.css"}}" rel="stylesheet" type="text/css" />
+
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    <main class="container">
+        {{> "header"}}
+        <section class="row canvas">
+            {{{body}}}
+        </section>
+        {{> "footer"}}
+    </main>
+
+    {{{block "scripts"}}}
+  
+    {{ghost_foot}}
+</body>
+</html>

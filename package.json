@@ -1,0 +1,28 @@
+{
+  "name": "today-theme",
+  "version": "1.0.0",
+  "description": "The blog theme for Mihok. Platform for empowering creativity. ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Matthew Mihok",
+    "email": "matthew@mihok.computer",
+    "url": "https://mihok.today",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "jest": "^24.7.1",
+    "jest-cli": "^24.7.1",
+    "prettier-eslint": "^8.8.2",
+    "prettier-eslint-cli": "^4.7.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.2",
+    "redux": "^4.0.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  }
+}
