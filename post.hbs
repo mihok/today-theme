@@ -18,7 +18,6 @@
                                  alt="{{title}}" />
                         </figure>
                         {{/if}}
-
                         <div class="post-full header">
                             <time class="post-full header date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
                             {{#primary_tag}}
@@ -26,19 +25,16 @@
                             {{/primary_tag}}
                             <h1 class="post-full title">{{title}}</h1>
                         </div>
-
-                        <section class="post-full content">
-                            {{content}}
-                        </section>
-
-                        {{!-- Email subscribe form at the bottom of the page --}}
                         {{#if @labs.subscribers}}
                         <section class="subscribe-form">
                             <h3 class="subscribe-form-title">Subscribe to {{@site.title}}</h3>
-                            <p>Get the latest posts delivered right to your inbox</p>
+                            <p>I sometimes write, and if you enjoy it enough to want to get an email when something new comes out, sign up below.</p>
                             {{subscribe_form placeholder="youremail@example.com"}}
                         </section>
                         {{/if}}
+                        <section class="post-full content">
+                            {{content}}
+                        </section>
                     </div>
                     <div class="post-full meta">
                         {{!-- There are two options for how we display the byline/author-info.
@@ -104,7 +100,7 @@
 
             {{!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs --}}
             {{#prev_post}}
-                {{> "post-card"}}
+                {{> "post"}}
             {{/prev_post}}
 
         </div>

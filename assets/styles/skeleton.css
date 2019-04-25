@@ -351,6 +351,46 @@ main > header .nav-access {
   font-family: 'Roboto', sans-serif;
   font-size: 1.5rem; }
 
+.post-full article.post .subscribe-form {
+  float: right;
+  clear: right;
+  width: 33%;
+  padding: 40px;
+  margin: 20px;
+  border: 1px solid #efefef; }
+
+.post-full article.post .meta > .author {
+  display: flex;
+  flex-direction: row;
+  width: 33%; }
+
+.post-full article.post .meta > .author .image {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  margin: 20px;
+  box-sizing: border-box; }
+.post-full article.post .meta .author .content {
+  padding: 20px 0 0 0; }
+
+.post-full article.post .meta > .author .name {
+  font-size: 2.4rem;
+  font-family: 'Playfair Display', serif;
+  color: #222;
+  margin: 0; }
+.post-full article.post .meta > .author .name a {
+  color: #222;
+  text-decoration: none; }
+.post-full article.post .meta > .author .content p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.15rem;
+  display: inline;
+  color: #939AA0;
+  line-height: 1.2rem; }
+
+.post-full article.post .meta > .author .content .more {
+  font-size: 1.15rem;
+  color: #939AA0; }
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
