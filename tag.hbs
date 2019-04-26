@@ -1,6 +1,13 @@
 {{!< default}}
             <div class="tag-feed twelve columns">
                 <div class="row">
+                    {{#tag}}
+                    <div class="tag-headline">
+                      <h1>Showing posts tagged with: '<span class="tag name">{{name}}</span>'</h1>
+                    </div>
+                    {{/tag}}
+                </div>
+                <div class="row">
 {{#foreach posts}}{{> "post"}}{{/foreach}}
                 </div>
             </div>

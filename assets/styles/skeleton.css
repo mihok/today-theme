@@ -223,87 +223,139 @@ main > header .nav-access {
 /* Default Theme
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .tag-feed > .row,
+.author-feed > .row,
 .post-feed > .row {
   height: 100%; }
+.tag-feed .row:first-child,
+.author-feed .row:first-child {
+  display: flex;
+  height: 10%;
+  align-items: center; }
+.tag-feed .row + .row,
+.author-feed .row + .row {
+  height: 90%; }
+.tag-feed .tag-headline,
+.author-feed .author-headline {
+  border-bottom: 1px solid #efefef;
+  margin: 20px 40px;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative; }
 .tag-feed article.post,
+.author-feed article.post,
 .post-feed article.post {
   width: 25%;
   height: 50%;
   float: left; }
+.tag-feed article.post:nth-child(5),
+.author-feed article.post:nth-child(5),
 .post-feed article.post:nth-child(6) {
+  clear: left;
   width: 50%; }
 .post-feed article.post:nth-child(2n+6) {
   background: #efefef; }
 .tag-feed article.post:not(.post-large),
+.author-feed article.post:not(.post-large),
 .post-feed article.post:not(.post-large) {
   padding: 40px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   flex-direction: column; }
-.tag-feed article.post:nth-child(2) {
+.tag-feed article.post:nth-child(2),
+.author-feed article.post:nth-child(2) {
   height: 100%;
   display: block;
   /* border-left: 1px solid #efefef;
   border-right: 1px solid #efefef; */ }
 .tag-feed article.post a,
+.author-feed article.post a,
 .post-feed article.post a {
   color: #000000;
   text-decoration: none; }
 .tag-feed article.post img,
+.author-feed article.post img,
 .post-feed article.post img {
   display: none; }
-.tag-feed article.post:nth-child(2) img {
+.tag-feed article.post:nth-child(2) img,
+.author-feed article.post:nth-child(2) img {
   display: block;
   width: 100%; }
 .tag-feed article.post-large,
+.author-feed article.post-large,
 .post-feed article.post-large {
   width: 50%;
   height: 100%;
   padding: 40px;
   box-sizing: border-box; }
 .tag-feed article.post-large img,
+.author-feed article.post-large img,
 .post-feed article.post-large img {
   display: block; }
+.tag-feed .tag-headline h1,
+.author-feed .author-headline h1 {
+  position: absolute;
+  top: -1.1rem;
+  background: #fff;
+  padding: 0 10px 0 0;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  color: #939AA0;
+  letter-spacing: 0.035rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400; }
 .tag-feed article.post h2,
+.author-feed article.post h2,
 .post-feed article.post h2,
 .tag-feed article.post h3,
+.author-feed article.post h3,
 .post-feed article.post h3,
 .tag-feed article.post h4,
+.author-feed article.post h4,
 .post-feed article.post h4,
 .tag-feed article.post h5,
+.author-feed article.post h5,
 .post-feed article.post h5,
 .tag-feed article.post h6,
+.author-feed article.post h6,
 .post-feed article.post h6 {
   font-family: 'Playfair Display', serif; }
 .tag-feed article.post h2,
+.author-feed article.post h2,
 .post-feed article.post h2 {
   font-size: 2.8rem; }
 .tag-feed article.post-large h2,
+.author-feed article.post-large h2,
 .post-feed article.post-large h2 {
   font-size: 3.6rem; }
 .tag-feed article.post p,
+.author-feed article.post p,
 .post-feed article.post p {
   font-family: 'Roboto', sans-serif;
   font-size: 1.3rem; }
 .tag-feed article.post-large .image,
+.author-feed article.post-large .image,
 .post-feed article.post-large .image {
   box-sizing: border-box;
   padding: 0 0 10px 10px;
   float: right;
   width: 66%; }
 .tag-feed article.post-large .content,
+.author-feed article.post-large .content,
 .post-feed article.post-large .content {
   box-sizing: border-box; }
 .tag-feed article.post-large .content.header,
+.author-feed article.post-large .content.header,
 .post-feed article.post-large .content.header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end; }
 .tag-feed article.post-large .content.title,
+.author-feed article.post-large .content.title,
 .post-feed article.post-large .content.title {
   display: flex; }
-.tag-feed article.post:not(.post-large) .content.title {
+.tag-feed article.post:not(.post-large) .content.title,
+.author-feed article.post:not(.post-large) .content.title {
   width: 66%; }
 .post-feed article.post:not(.post-large) .content.title {
   width: 66%;
@@ -312,31 +364,42 @@ main > header .nav-access {
   color: #222222; }
 
 .tag-feed article.post-large .content.excerpt,
+.author-feed article.post-large .content.excerpt,
 .post-feed article.post-large .content.excerpt {
   width: 50%; }
-.tag-feed article.post-large:not(.post-large) .content.excerpt,
 .post-feed article.post:not(.post-large) .content.excerpt {
   display: none; }
+.tag-feed article.post .content.excerpt .link,
+.author-feed article.post .content.excerpt .link,
+.post-feed article.post .content.excerpt .link {
+  color: #939AA0;
+  text-decoration: underline; }
 .tag-feed article.post .meta,
+.author-feed article.post .meta,
 .post-feed article.post .meta {
   clear: both;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  height: 32px;
-  border-top: 1px solid #efefef; }
+  border-top: 1px solid #efefef;
+  padding-top: 1.2rem; }
 .tag-feed article.post .meta .author-list,
+.author-feed article.post .meta .author-list,
 .post-feed article.post .meta .author-list {
   display: none; }
 .tag-feed article.post .content.tags,
+.author-feed article.post .ontent.tags,
 .post-feed article.post .content.tags,
 .tag-feed article.post .meta .index,
+.author-feed article.post .meta .index,
 .post-feed article.post .meta .index,
 .tag-feed article.post .meta .reading-time,
+.author-feed article.post .meta .reading-time,
 .post-feed article.post .meta .reading-time {
   color: #939AA0;
   font-size: 1.1rem; }
 .tag-feed article.post .meta .index,
+.author-feed article.post .meta .index,
 .post-feed article.post .meta .index {
   font-family: 'Meslo'; }
 
@@ -344,6 +407,12 @@ main > header .nav-access {
   color: #ffffff; }
 .post-feed article.post:nth-child(n+6) .content.tags {
   color: #939AA0; }
+
+.post-feed article.post:not(.post-large):nth-child(2) .content.excerpt .link,
+.post-feed article.post:not(.post-large):nth-child(3) .content.excerpt .link,
+.post-feed article.post:not(.post-large):nth-child(4) .content.excerpt .link,
+.post-feed article.post:not(.post-large):nth-child(5) .content.excerpt .link {
+  color #ffffff; }
 .post-feed article.post:not(.post-large):nth-child(2) .meta {
   border-top-color: #ff9f43; }
 .post-feed article.post:not(.post-large):nth-child(2) .meta .index,

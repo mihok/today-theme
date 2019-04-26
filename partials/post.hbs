@@ -1,4 +1,4 @@
-<article class="post {{post_class}} {{#unless feature_image}}no-image{{/unless}}{{#is "home"}}{{#has index="nth:6"}}post-large{{/has}}{{/is}}{{#is "tag"}}{{#has index="nth:4"}}post-large{{/has}}{{/is}}">
+<article class="post {{post_class}} {{#unless feature_image}}no-image{{/unless}} {{#if @first}}{{!#has index="nth:6"}}post-large{{/if}}">
                     {{#if feature_image}}
                         <a class="post image-link" href="{{url}}">
                             {{!-- This is a responsive image, it loads different sizes depending on device
@@ -23,7 +23,10 @@
                                     <h2 class="post content title">{{title}}</h2>
                                 </div>
                                 <section class="post content excerpt">
-                                    <p>{{excerpt words="33"}}</p>
+                                    <p>
+                                        {{excerpt words="33"}} &hellip;
+                                        <span class="post content excerpt link">Read more</span>
+                                    </p>
                                 </section>
                             </a>
                         </div>
