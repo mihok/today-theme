@@ -11,6 +11,9 @@
     "url": "https://mihok.today",
   "license": "UNLICENSED",
   "private": true,
+  "config": {
+    "posts_per_page": 10
+  },
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.1.0",

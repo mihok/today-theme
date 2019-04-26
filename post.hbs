@@ -20,9 +20,11 @@
                         {{/if}}
                         <div class="post-full header">
                             <time class="post-full header date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
-                            {{#primary_tag}}
-                            <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
-                            {{/primary_tag}}
+                            {{#if tags}}
+                                {{#foreach tags}}
+                            <span class="divider">/</span> <a class="tags" href="{{url}}">{{name}}</a>
+                                {{/foreach}}
+                            {{/if}}
                             <h1 class="post-full title">{{title}}</h1>
                         </div>
                         {{#if @labs.subscribers}}

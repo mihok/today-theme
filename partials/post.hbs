@@ -1,4 +1,4 @@
-                    <article class="post {{post_class}} {{#unless feature_image}}no-image{{else}}{{#is "home"}}{{#has index="nth:6"}}post-large{{/has}}{{/is}}{{/unless}}">
+<article class="post {{post_class}} {{#unless feature_image}}no-image{{/unless}}{{#is "home"}}{{#has index="nth:6"}}post-large{{/has}}{{/is}}{{#is "tag"}}{{#has index="nth:4"}}post-large{{/has}}{{/is}}">
                     {{#if feature_image}}
                         <a class="post image-link" href="{{url}}">
                             {{!-- This is a responsive image, it loads different sizes depending on device
@@ -45,5 +45,6 @@
                             {{/foreach}}
                             </ul>
                             <span class="reading-time">{{reading_time}}</span>
+                            <span class="index">0{{@number}}</span>
                         </div>
                     </article>
